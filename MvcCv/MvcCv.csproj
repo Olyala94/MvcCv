@@ -2601,6 +2601,8 @@
     <Content Include="Views\Default\Iletisim.cshtml" />
     <Content Include="Views\Hakkimda\Index.cshtml" />
     <Content Include="Views\Deneyim\Index.cshtml" />
+    <Content Include="Views\Deneyim\DeneyimEkle.cshtml" />
+    <Content Include="Views\Deneyim\DeneyimGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

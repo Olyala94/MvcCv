@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 
 
@@ -36,6 +37,11 @@ namespace MvcCv.Repositories
         public void TUpdate(T p)
         {
             db.SaveChanges(); //"TUpdate" Değerini direk olarak değişikleri kayd et... 
+        }
+
+        public T Find(Expression<Func<T, bool>> where) 
+        {
+            return db.Set<T>().FirstOrDefault(where);
         }
     }
 }

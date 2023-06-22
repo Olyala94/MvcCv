@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count =1;
 }
 <br />
 <h2>Deneyim Listesi</h2>
@@ -18,14 +19,15 @@
     </tr>
     @foreach (var item in Model)
     {
+        count += 1;
         <tr>
-            <td>@item.ID</td>
+            <td>@count</td>
             <td>@item.Baslik</td>
             <td>@item.AltBaslik</td>
             <td>@item.Tarih</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-success">Düzenle</a></td>
+            <td><a href="/Deneyim/DeneyimSil/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Deneyim/DeneyimGetir/@item.ID" class="btn btn-success">Düzenle</a></td>
         </tr>
     }
 </table>
-<a href="#" class="btn btn-primary">Yeni Deneyim Ekle</a>
+<a href="/Deneyim/DeneyimEkle/" class="btn btn-primary">Yeni Deneyim Ekle</a>
